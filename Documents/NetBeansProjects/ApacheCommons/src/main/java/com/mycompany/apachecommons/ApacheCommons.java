@@ -11,7 +11,7 @@ import java.io.OutputStream;
 public class ApacheCommons {
 
 String n;
-
+String w;
     public String getN() {
         return n;
     }
@@ -41,7 +41,29 @@ String n;
     CommandLine cmdLine = parser.parse(options, args);  
          if (cmdLine.hasOption("h"))
              System.out.println("Para ejcutar un Hola Mundo, ejecuta el comando w; si quieres ejecutar un Hola Mundo Bonito, ejecuta el comando n o nice;si quieres ejecutar un Hola Mundo Cruel, ejecuta el comando c o cruel, si quieres saber cuando años de vida lleva ejecuta el comando y o years");
-                }
+              
+         if (cmdLine.hasOption("w"))
+             System.out.println(getOptionValue("w"));
+         
+          if (cmdLine.hasOption("c"))
+             System.out.println(getOptionValue("c"));
+          
+          if (cmdLine.hasOption("n"))
+             System.out.println(getOptionValue("n"));
+          
+          if (cmdLine.hasOption("y"))
+             System.out.println(getOptionValue("y"));
+    }
+
+    private boolean getOptionValue(String w,String n,String c) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private boolean getOptionValue(String y) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+ 
 
    
 
