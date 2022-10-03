@@ -8,10 +8,10 @@ import java.io.OutputStream;
 /**
 * -w "Hola Mundo"   -n  "Hola Mundo Bonito"    -c "Hola Mundo Cruel"    -h "Ayuda"     -y "Tras n años de vida"
 */
-public class ApacheCommons {
+    public class ApacheCommons  {
 
-String n;
-String w;
+    String n;
+
     public String getN() {
         return n;
     }
@@ -20,52 +20,37 @@ String w;
         this.n = n;
     }
    
-    /**
-     *
-     */
-  
-    /**
-     *
-     * @param args
-     */
-    public void main(String[] args) throws ParseException {
-        /**
-         * 
-         */
-        Options options = new Options();
+ 
+    
+    public static void main(String[] args) throws ParseException    {     
+     Options options = new Options();
         options.addOption("w", false, "Hola Mundo");
         options.addOption("h", "help", false, "Imprimir mensaje de ayuda" );
         options.addOption("n","nice", false, "Hola Mundo Bonito");
         options.addOption("c","cruel", false, "Hola Mundo Cruel");
-        options.addOption("y","years", true, "Tras "+ n +" años de vida");
-        
-     BasicParser parser  = new BasicParser();  
-    CommandLine cmdLine = parser.parse(options, args);  
+        options.addOption("y","years", true, "Tras n años de vida");
+      BasicParser parser  = new BasicParser();  
+       CommandLine cmdLine = parser.parse(options, args);  
          if (cmdLine.hasOption("h"))
              System.out.println("Para ejcutar un Hola Mundo, ejecuta el comando w; si quieres ejecutar un Hola Mundo Bonito, ejecuta el comando n o nice;si quieres ejecutar un Hola Mundo Cruel, ejecuta el comando c o cruel, si quieres saber cuando años de vida lleva ejecuta el comando y o years");
               
          if (cmdLine.hasOption("w"))
-             System.out.println(getOptionValue("w"));
+             System.out.println("Hola mundo");
          
           if (cmdLine.hasOption("c"))
-             System.out.println(getOptionValue("c"));
+             System.out.println("Hola mundo cruel");
           
           if (cmdLine.hasOption("n"))
-             System.out.println(getOptionValue("n"));
+             System.out.println("Hola mundo bonito");
           
           if (cmdLine.hasOption("y"))
-             System.out.println(getOptionValue("y"));
+             System.out.println("Tras n años");
     }
+    
+  
 
-    private boolean getOptionValue(String w,String n,String c) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
-    private boolean getOptionValue(String y) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
- 
+    
 
    
 
