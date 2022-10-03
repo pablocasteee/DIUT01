@@ -29,12 +29,14 @@ String w;
      * @param args
      */
     public void main(String[] args) throws ParseException {
-        
+        /**
+         * 
+         */
         Options options = new Options();
-        options.addOption("w", true, "Hola Mundo");
-        options.addOption("h", "help", true, "Imprimir mensaje de ayuda" );
-        options.addOption("n","nice", true, "Hola Mundo Bonito");
-        options.addOption("c","cruel", true, "Hola Mundo Cruel");
+        options.addOption("w", false, "Hola Mundo");
+        options.addOption("h", "help", false, "Imprimir mensaje de ayuda" );
+        options.addOption("n","nice", false, "Hola Mundo Bonito");
+        options.addOption("c","cruel", false, "Hola Mundo Cruel");
         options.addOption("y","years", true, "Tras "+ n +" años de vida");
         
      BasicParser parser  = new BasicParser();  
