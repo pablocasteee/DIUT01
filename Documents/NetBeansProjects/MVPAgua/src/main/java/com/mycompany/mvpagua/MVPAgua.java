@@ -27,7 +27,7 @@ import org.apache.commons.cli.Options;
             System.out.println("El agua está a mas de 100 grados");
          }else{         
          }
-         System.out.println("Hay " + temp + " grados");
+         System.out.println("Hay " + temp + " grados!");
     }
     }
     
