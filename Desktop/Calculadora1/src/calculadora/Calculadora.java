@@ -489,6 +489,7 @@ public class Calculadora extends javax.swing.JFrame {
         try {
             String resultado = se.eval(this.txtOperacion.getText()).toString();
             this.txtResultado.setText(resultado);
+            txtOperacion.setText(txtResultado.getText());
         } catch (Exception e) {
             btn_igual.doClick();
             
