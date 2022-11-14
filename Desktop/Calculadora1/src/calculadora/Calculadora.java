@@ -42,6 +42,79 @@ public class Calculadora extends javax.swing.JFrame  {
         
         initComponents();
         setLocationRelativeTo(null);
+        this.setResizable(true);
+        
+          this.btn_4.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("4"), "4");
+        this.btn_4.getActionMap().put("4", new AbstractAction() {
+        @Override 
+        public void actionPerformed(ActionEvent ae) {
+        btn_4.doClick();
+        }
+        });
+          this.btn_1.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("1"), "1");
+        this.btn_1.getActionMap().put("1", new AbstractAction() {
+        @Override 
+        public void actionPerformed(ActionEvent ae) {
+        btn_1.doClick();
+        }
+        });
+         this.btn_2.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("2"), "2");
+        this.btn_2.getActionMap().put("2", new AbstractAction() {
+        @Override 
+        public void actionPerformed(ActionEvent ae) {
+        btn_2.doClick();
+        }
+        });
+       this.btn_3.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("3"), "3");
+        this.btn_3.getActionMap().put("3", new AbstractAction() {
+        @Override 
+        public void actionPerformed(ActionEvent ae) {
+        btn_3.doClick();
+        }
+        });
+         this.btn_0.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("0"), "0");
+        this.btn_0.getActionMap().put("0", new AbstractAction() {
+        @Override 
+        public void actionPerformed(ActionEvent ae) {
+        btn_0.doClick();
+        }
+        });
+         this.btn_5.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("5"), "5");
+        this.btn_5.getActionMap().put("5", new AbstractAction() {
+        @Override 
+        public void actionPerformed(ActionEvent ae) {
+        btn_5.doClick();
+        }
+        });
+         this.btn_6.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("6"), "6");
+        this.btn_6.getActionMap().put("6", new AbstractAction() {
+        @Override 
+        public void actionPerformed(ActionEvent ae) {
+        btn_6.doClick();
+        }
+        });
+         this.btn_7.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("7"), "7");
+        this.btn_7.getActionMap().put("7", new AbstractAction() {
+        @Override 
+        public void actionPerformed(ActionEvent ae) {
+        btn_7.doClick();
+        }
+        });
+         this.btn_8.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("8"), "8");
+        this.btn_8.getActionMap().put("8", new AbstractAction() {
+        @Override 
+        public void actionPerformed(ActionEvent ae) {
+        btn_8.doClick();
+        }
+        });
+         this.btn_9.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("9"), "9");
+        this.btn_9.getActionMap().put("9", new AbstractAction() {
+        @Override 
+        public void actionPerformed(ActionEvent ae) {
+        btn_9.doClick();
+        }
+        });
+}
        
     }
        
@@ -488,13 +561,7 @@ public class Calculadora extends javax.swing.JFrame  {
 
     private void btn_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_7ActionPerformed
         this.txtOperacion.setText(this.txtOperacion.getText()+7);
-        this.btn_7.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("7"), "7");
-        this.btn_7.getActionMap().put("7", new AbstractAction() {
-        @Override 
-        public void actionPerformed(ActionEvent ae) {
-        txtOperacion.setText(txtOperacion.getText()+7);
-}
-});
+       
     }
 
     private void btn_expActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_expActionPerformed
@@ -505,19 +572,7 @@ public class Calculadora extends javax.swing.JFrame  {
 
     private void btn_divisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_divisionActionPerformed
               addNumber("/");
-               btn_division.addKeyListener(new KeyAdapter(){
-           
-       public void keyPressed(KeyEvent e){
-           
-       if (e.getKeyCode() == KeyEvent.VK_DIVIDE)    ;
-           
-       txtOperacion.setText(txtOperacion.getText()+ "/");  
-           
-       
-           
-       }    
-           
-       });
+               
             /* Operacion op1=new Operacion();
               if (operar){
                  num1=Double.valueOf(txtOperacion.getText());
@@ -536,14 +591,8 @@ public class Calculadora extends javax.swing.JFrame  {
 
     private void btn_multiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_multiActionPerformed
            addNumber("*");  
-            btn_multi.addKeyListener(new KeyAdapter(){
-           
-       public void keyPressed(KeyEvent e){
-           
-       if (e.getKeyCode() == KeyEvent.VK_MULTIPLY)    
-           
-       txtOperacion.setText(txtOperacion.getText()+ "*");  
-           
+              
+    }   
         /* Operacion op1=new Operacion();
               if (operar){
                  num1=Double.valueOf(txtOperacion.getText());
@@ -558,113 +607,51 @@ public class Calculadora extends javax.swing.JFrame  {
                    txtResultado.setText(op1.resultado);
                    
               }*/
-           
-       }    
-           
-       });
-    }
+          
 
     private void btn_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_9ActionPerformed
         this.txtOperacion.setText(this.txtOperacion.getText()+9);
-       this.btn_9.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("9"), "9");
-        this.btn_9.getActionMap().put("9", new AbstractAction() {
-        @Override 
-        public void actionPerformed(ActionEvent ae) {
-        txtOperacion.setText(txtOperacion.getText()+9);
-}
-});
+       
     }
                
     private void btn_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_8ActionPerformed
         this.txtOperacion.setText(this.txtOperacion.getText()+8);
-        this.btn_8.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("8"), "8");
-        this.btn_8.getActionMap().put("8", new AbstractAction() {
-        @Override 
-        public void actionPerformed(ActionEvent ae) {
-        txtOperacion.setText(txtOperacion.getText()+8);
-}
-});
+       
     }
 
     private void btn_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_4ActionPerformed
        this.txtOperacion.setText(this.txtOperacion.getText()+4);
-       this.btn_4.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("4"), "4");
-        this.btn_4.getActionMap().put("4", new AbstractAction() {
-        @Override 
-        public void actionPerformed(ActionEvent ae) {
-        txtOperacion.setText(txtOperacion.getText()+4);
-}
-});
+      
     }
 
     private void btn_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_5ActionPerformed
         this.txtOperacion.setText(this.txtOperacion.getText()+5);
-        this.btn_5.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("5"), "5");
-        this.btn_5.getActionMap().put("5", new AbstractAction() {
-        @Override 
-        public void actionPerformed(ActionEvent ae) {
-        txtOperacion.setText(txtOperacion.getText()+5);
-}
-});
+       
     }
 
     private void btn_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_6ActionPerformed
         this.txtOperacion.setText(this.txtOperacion.getText()+6);
-         this.btn_6.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("6"), "6");
-        this.btn_6.getActionMap().put("6", new AbstractAction() {
-        @Override 
-        public void actionPerformed(ActionEvent ae) {
-        txtOperacion.setText(txtOperacion.getText()+6);
-}
-});
+        
     }
 
     private void btn_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_1ActionPerformed
         this.txtOperacion.setText(this.txtOperacion.getText()+1);
-        this.btn_1.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("1"), "1");
-        this.btn_1.getActionMap().put("1", new AbstractAction() {
-        @Override 
-        public void actionPerformed(ActionEvent ae) {
-        txtOperacion.setText(txtOperacion.getText()+1);
-}
-});
+        
     }
 
     private void btn_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_2ActionPerformed
         this.txtOperacion.setText(this.txtOperacion.getText()+2);
-        this.btn_2.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("2"), "2");
-        this.btn_2.getActionMap().put("2", new AbstractAction() {
-        @Override 
-        public void actionPerformed(ActionEvent ae) {
-        txtOperacion.setText(txtOperacion.getText()+2);
-}
-});
+      
     }
 
     private void btn_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_3ActionPerformed
         this.txtOperacion.setText(this.txtOperacion.getText()+3);
-        this.btn_3.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("3"), "3");
-        this.btn_3.getActionMap().put("3", new AbstractAction() {
-        @Override 
-        public void actionPerformed(ActionEvent ae) {
-        txtOperacion.setText(txtOperacion.getText()+3);
-}
-});
+       
     }
 
     private void btn_dotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dotActionPerformed
         addNumber(".");
-         btn_dot.addKeyListener(new KeyAdapter(){
-           
-       public void keyPressed(KeyEvent e){
-           
-       if (e.getKeyCode() == KeyEvent.VK_DECIMAL)    
-           
-       txtOperacion.setText(txtOperacion.getText()+ ".");  
-           
-       }    
-           
-       });
+        
     }
 
     private void btn_igualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_igualActionPerformed
@@ -680,17 +667,8 @@ public class Calculadora extends javax.swing.JFrame  {
 
     private void btn_sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sumaActionPerformed
         addNumber("+");         
-        btn_suma.addKeyListener(new KeyAdapter(){
-           
-       public void keyPressed(KeyEvent e){
-           
-       if (e.getKeyCode() == KeyEvent.VK_PLUS)    
-           
-       txtOperacion.setText(txtOperacion.getText()+ "+");  
-    
-       }    
-           
-       });
+       
+    }
          /* Operacion op1=new Operacion();
               if (operar){
                  num1=Double.valueOf(txtOperacion.getText());
@@ -705,21 +683,12 @@ public class Calculadora extends javax.swing.JFrame  {
                    txtResultado.setText(op1.resultado);
                    
               }*/
-    }
+    
     
     private void btn_restaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_restaActionPerformed
              addNumber("-");
-              btn_resta.addKeyListener(new KeyAdapter(){
-           
-       public void keyPressed(KeyEvent e){
-           
-       if (e.getKeyCode() == KeyEvent.VK_MINUS)    
-           
-       txtOperacion.setText(txtOperacion.getText()+ "-");  
-           
-       }    
-           
-       });
+             
+    }
               /*if (operar){
                  num1=Double.valueOf(txtOperacion.getText());
                  txtOperacion.setText("");
@@ -732,7 +701,7 @@ public class Calculadora extends javax.swing.JFrame  {
                    txtResultado.setText(op1.resultado.toString());
                    
               }*/
-    }
+    
 
     boolean modoOscuro = false;
 
@@ -788,13 +757,6 @@ public class Calculadora extends javax.swing.JFrame  {
 
     private void btn_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_0ActionPerformed
         addNumber("0");
-         this.btn_0.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("0"), "0");
-        this.btn_0.getActionMap().put("0", new AbstractAction() {
-        @Override 
-        public void actionPerformed(ActionEvent ae) {
-        txtOperacion.setText(txtOperacion.getText()+0);
-}
-});
     
     }
 
