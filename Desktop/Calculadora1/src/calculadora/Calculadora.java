@@ -32,7 +32,6 @@ public class Calculadora extends javax.swing.JFrame {
         btn_igual = new javax.swing.JButton();
         btn_9 = new javax.swing.JButton();
         btn_exp = new javax.swing.JButton();
-        btn_porcentaje = new javax.swing.JButton();
         btn_division = new javax.swing.JButton();
         btn_multi = new javax.swing.JButton();
         btn_resta = new javax.swing.JButton();
@@ -151,20 +150,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
         jPanel2.add(btn_exp, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, -1, -1));
 
-        btn_porcentaje.setFont(new java.awt.Font("Montserrat Alternates Medium", 0, 21)); // NOI18N
-        btn_porcentaje.setForeground(new java.awt.Color(55, 62, 71));
-        btn_porcentaje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn1.png"))); // NOI18N
-        btn_porcentaje.setText("%");
-        btn_porcentaje.setFocusPainted(false);
-        btn_porcentaje.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btn_porcentaje.setPreferredSize(new java.awt.Dimension(50, 50));
-        btn_porcentaje.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn1.png"))); // NOI18N
-        btn_porcentaje.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn1_pressed.png"))); // NOI18N
-        btn_porcentaje.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_porcentajeActionPerformed(evt);
-            }
-        });
+      
         jPanel2.add(btn_porcentaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, -1, -1));
 
         btn_division.setFont(new java.awt.Font("Montserrat Alternates Medium", 0, 24)); // NOI18N
