@@ -144,7 +144,7 @@ public class Calculadora extends javax.swing.JFrame  {
         btn_dot = new javax.swing.JButton();
         btn_00 = new javax.swing.JButton();
         btn_0 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btn_error = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         txtOperacion = new javax.swing.JLabel();
         txtResultado = new javax.swing.JLabel();
@@ -469,22 +469,22 @@ public class Calculadora extends javax.swing.JFrame  {
         });
         jPanel2.add(btn_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(55, 62, 71));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn1.png"))); // NOI18N
-        jButton1.setText("Error");
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setMaximumSize(new java.awt.Dimension(80, 57));
-        jButton1.setMinimumSize(new java.awt.Dimension(80, 57));
-        jButton1.setPreferredSize(new java.awt.Dimension(50, 50));
-        jButton1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn1.png"))); // NOI18N
-        jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn1_pressed.png"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_error.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
+        btn_error.setForeground(new java.awt.Color(55, 62, 71));
+        btn_error.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn1.png"))); // NOI18N
+        btn_error.setText("Error");
+        btn_error.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn_error.setMaximumSize(new java.awt.Dimension(80, 57));
+        btn_error.setMinimumSize(new java.awt.Dimension(80, 57));
+        btn_error.setPreferredSize(new java.awt.Dimension(50, 50));
+        btn_error.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn1.png"))); // NOI18N
+        btn_error.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn1_pressed.png"))); // NOI18N
+        btn_error.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_errorActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, 50, 50));
+        jPanel2.add(btn_error, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, 50, 50));
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -717,7 +717,7 @@ public class Calculadora extends javax.swing.JFrame  {
             cambiarColorBtn1(btn_exp);
             cambiarColorBtn1(btn_division);
             cambiarColorBtn1(btn_c);
-            cambiarColorBtn1(btn_0);
+            cambiarColorBtn2(btn_0);
             cambiarColorBtn2(btn_1);
             cambiarColorBtn2(btn_2);
             cambiarColorBtn2(btn_3);
@@ -728,7 +728,8 @@ public class Calculadora extends javax.swing.JFrame  {
             cambiarColorBtn2(btn_8);
             cambiarColorBtn2(btn_9);
             cambiarColorBtn2(btn_00);
-            cambiarColorBtn2(btn_dot);
+            cambiarColorBtn1(btn_dot);
+            cambiarColorBtn1(btn_error);
             
             btn_oscuro.setIcon(new ImageIcon(getClass().getResource("/images/darkmode_2.png")));
             btn_igual.setIcon(new ImageIcon(getClass().getResource("/images/btn3_dark.png")));
@@ -760,7 +761,7 @@ public class Calculadora extends javax.swing.JFrame  {
     
     }
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_error1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
       this.txtOperacion.setText("");
       this.txtResultado.setText("");
       this.txtOperacion.setText("Ha habido un error");
@@ -842,7 +843,7 @@ public class Calculadora extends javax.swing.JFrame  {
     private javax.swing.JButton btn_oscuro;
     private javax.swing.JButton btn_resta;
     private javax.swing.JButton btn_suma;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btn_error;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
